@@ -1,0 +1,4 @@
+=== RUN   TestAdd
+--- PASS: TestAdd (0.00s)
+PASS
+ok  	github.com/josecordaz/unit_tests_go_cache	0.004s
