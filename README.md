@@ -6,7 +6,7 @@
 docker run -it -v `pwd`:/go/src/github.com/josecordaz/unit_tests_go_cache unittest go test -v ./...
 ```
 
-Output:
+### Output:
 ```sh
 docker build -t unittest .
 Sending build context to Docker daemon  585.7kB
@@ -27,7 +27,7 @@ PASS
 ok      github.com/josecordaz/unit_tests_go_cache       0.004s
 ```
 
-Test it with 
+**Test it with**
 ```bash
 make test-no-cache
 ```
@@ -38,7 +38,7 @@ make test-no-cache
 docker run -it -v `pwd`:/go/src/github.com/josecordaz/unit_tests_go_cache -v `pwd`/.cache:/root/.cache unittest go test -v ./...
 ```
 
-Output:
+### Output:
 ```bash
 docker build -t unittest .
 Sending build context to Docker daemon  586.8kB
@@ -59,14 +59,14 @@ PASS
 ok      github.com/josecordaz/unit_tests_go_cache       (cached)
 ```
 
-The message `(cached)` is shown :D.
+### Result:
+The message **(cached)** is shown in the output :D.
 
-Test it with 
+**Test it with**
 ```bash
 make test-with-cache
 ```
 
-I found it using this resources.
-
 Resources:
-https://medium.com/windmill-engineering/tips-tricks-for-making-your-golang-container-builds-10x-faster-4cc618a43827
+
+- https://medium.com/windmill-engineering/tips-tricks-for-making-your-golang-container-builds-10x-faster-4cc618a43827
